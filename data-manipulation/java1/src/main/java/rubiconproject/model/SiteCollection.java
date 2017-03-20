@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 
 /**
- * SiteCollection of entries.
+ * Collection of sites, identified by id.
  *
  * @author vkolodrevskiy
  */

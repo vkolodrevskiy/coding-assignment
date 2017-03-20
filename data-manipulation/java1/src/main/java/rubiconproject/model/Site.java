@@ -3,7 +3,7 @@ package rubiconproject.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Represents an entry from csv or json file.
+ * Represents site entry from csv or json file.
  *
  * @author vkolodrevskiy
  */
