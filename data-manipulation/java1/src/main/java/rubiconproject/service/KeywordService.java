@@ -1,5 +1,7 @@
 package rubiconproject.service;
 
+import rubiconproject.model.Site;
+
 /**
  * <p>A service to resolve keywords from a site object.</p>
  *
@@ -13,6 +15,5 @@ public interface KeywordService {
      * @param site
      * @return a comma delimited string or an empty string if there are no keywords associated with the site.
      */
-    String resolveKeywords(Object site);
-
+    String resolveKeywords(Site site);
 }

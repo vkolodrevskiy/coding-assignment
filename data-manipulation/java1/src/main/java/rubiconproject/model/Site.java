@@ -8,29 +8,28 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * @author vkolodrevskiy
  */
 public class Site {
-
     @JsonProperty("site_id")
-    private Long id;
+    private Integer id;
     private String name;
     private String keywords;
     private Boolean mobile;
-    private Double score;
+    private Integer score;
 
     public Site() {
     }
 
-    public Site(Long id, String name, Boolean mobile, Double score) {
+    public Site(Integer id, String name, Boolean mobile, Integer score) {
         this.id = id;
         this.name = name;
         this.mobile = mobile;
         this.score = score;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -58,11 +57,11 @@ public class Site {
         this.mobile = mobile;
     }
 
-    public Double getScore() {
+    public Integer getScore() {
         return score;
     }
 
-    public void setScore(Double score) {
+    public void setScore(Integer score) {
         this.score = score;
     }
 }
