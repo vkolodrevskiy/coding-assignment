@@ -11,8 +11,8 @@ import java.io.File;
  *
  * @author vkolodrevskiy
  */
-public class App {
-    private static final Logger log = LoggerFactory.getLogger(App.class);
+public class Main {
+    private static final Logger log = LoggerFactory.getLogger(Main.class);
     private static final String OUTPUT_DEFAULT_FILE_NAME = "output.json";
 
     public static void main(String[] args) {
