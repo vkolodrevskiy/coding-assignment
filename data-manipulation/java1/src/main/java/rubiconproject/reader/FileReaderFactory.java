@@ -2,19 +2,19 @@ package rubiconproject.reader;
 
 import rubiconproject.model.SourceType;
 
-import java.io.File;
-import java.io.IOException;
-
 /**
  * Retrieve specific {@link DataFileReader} implementation.
  *
  * @author vkolodrevskiy
  */
 public class FileReaderFactory {
-    public DataFileReader getReader(SourceType sourceType, File file) throws IOException {
+    private final DataFileReader csvFileReader = new CsvFileReader();
+    private final DataFileReader jsonFileReader = new JsonFileReader();
+
+    public DataFileReader getReader(SourceType sourceType) {
         switch (sourceType) {
-            case CSV: return new CsvDataFileReader(file);
-            case JSON: return new JsonDataFileReader(file);
+            case CSV: return csvFileReader;
+            case JSON: return jsonFileReader;
             default: throw new IllegalArgumentException(String.format("Source type is not supported %s", sourceType));
         }
     }
