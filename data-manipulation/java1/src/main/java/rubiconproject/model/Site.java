@@ -1,6 +1,6 @@
 package rubiconproject.model;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Represents site entry from csv or json file.
@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
  * @author vkolodrevskiy
  */
 public class Site {
-    @SerializedName("site_id")
+    @JsonProperty("site_id")
     private Integer id;
     private String name;
     private String keywords;

@@ -1,6 +1,6 @@
 package rubiconproject.model;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
@@ -10,13 +10,11 @@ import java.util.List;
  * @author vkolodrevskiy
  */
 public class SiteCollection {
-    @SerializedName("collectionId")
+    @JsonProperty("collectionId")
     private String id;
     private List<Site> sites;
 
-    public SiteCollection(String id, List<Site> sites) {
-        this.id = id;
-        this.sites = sites;
+    public SiteCollection() {
     }
 
     public String getId() {
