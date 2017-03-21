@@ -17,5 +17,16 @@ dependencies {
 task execute (type:JavaExec) {
     main = 'rubiconproject.Main'
     classpath = sourceSets.main.runtimeClasspath
-    args System.getProperty("exec.args","").split()
+    args System.getProperty("exec.args","").split(",")
+}
+
+mainClassName = "rubiconproject.Main"
+
+jar {
+    manifest {
+        attributes "Main-Class": "$mainClassName"
+    }
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
 }

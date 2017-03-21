@@ -1,0 +1,3 @@
+How to run build: ./gradlew build
+How to run test: ./gradlew test
+How to execute program: ./gradlew execute -Dexec.args=input,output.json
