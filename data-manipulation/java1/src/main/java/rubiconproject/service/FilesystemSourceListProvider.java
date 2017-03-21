@@ -18,13 +18,20 @@ import java.util.List;
 public class FilesystemSourceListProvider {
     private final Logger log = LoggerFactory.getLogger(FilesystemSourceListProvider.class);
 
+    /**
+     * Retrieves {@code List} of data sources. Only CSV abd JSON files
+     * are valid. No folder recursion is supported.
+     *
+     * @param inputDir input directory.
+     * @return {@code List} of data sources
+     */
     public List<Source> getInputSources(File inputDir) {
-        log.info("inputDirectory " + inputDir.getPath());
+        log.info("Input directory [{}].", inputDir.getPath());
 
         List<Source> sources = new ArrayList<>();
         File[] listOfFiles = inputDir.listFiles();
         if (listOfFiles == null) {
-            log.error("{} pathname does not denote a directory, or an I/O error occurs", inputDir.getPath());
+            log.error("[{}] pathname does not denote a directory, or an I/O error occurs.", inputDir.getPath());
             return Collections.emptyList();
         }
         for (File file : listOfFiles) {
