@@ -2,7 +2,6 @@ package rubiconproject.reader;
 
 import rubiconproject.model.Site;
 
-import java.io.Closeable;
 import java.io.File;
 import java.util.List;
 
@@ -12,5 +11,11 @@ import java.util.List;
  * @author vkolodrevskiy
  */
 public interface DataFileReader {
+    /**
+     * Read sites from data file.
+     *
+     * @param file object representing file to read.
+     * @return {@code List} of sites.
+     */
     List<Site> read(File file);
 }
