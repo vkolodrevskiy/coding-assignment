@@ -14,7 +14,9 @@ public class SiteCollection {
     private String id;
     private List<Site> sites;
 
-    public SiteCollection() {
+    public SiteCollection(String id, List<Site> sites) {
+        this.id = id;
+        this.sites = sites;
     }
 
     public String getId() {
