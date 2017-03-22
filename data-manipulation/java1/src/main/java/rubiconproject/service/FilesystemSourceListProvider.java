@@ -20,7 +20,7 @@ public class FilesystemSourceListProvider {
 
     /**
      * Retrieves {@code List} of data sources. Only CSV abd JSON files
-     * are valid. No folder recursion is supported.
+     * are acceptable. No folder recursion is supported.
      *
      * @param inputDir input directory.
      * @return {@code List} of data sources

@@ -1,0 +1,5 @@
+[
+  {"site_id": "14007", "name": "test.com/json1", "mobile": 1, "score": 50 },
+  {"site_id": "14008", "name": "test.com/json2", "mobile": 1, "score": 100 },
+  {"site_id": "14009", "name": "test.com/json3", "mobile": 0, "score": 150 }
+]
